@@ -63,3 +63,5 @@ Debug/
 Release/
 
 *.lst
+*.launch
+
