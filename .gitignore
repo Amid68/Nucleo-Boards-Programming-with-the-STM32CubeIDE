@@ -6,6 +6,7 @@
 *.ko
 *.obj
 *.elf
+*.axf
 
 # Linker output
 *.ilk
@@ -35,12 +36,17 @@
 *.i*86
 *.x86_64
 *.hex
+*.bin
+*.srec
 
 # Debug files
 *.dSYM/
 *.su
 *.idb
 *.pdb
+*.dmp
+*.bak
+*.svd
 
 # Kernel Module Compile Results
 *.mod*
@@ -57,11 +63,20 @@ dkms.conf
 .settings/
 .mxproject
 .metadata/
+*.ide
+*.launch
+*.log
+*.bak
 
 # Build directories
 Debug/
 Release/
 
+# STM32CubeMX generated files (reproducible from .ioc)
 *.lst
 *.launch
-
+Makefile
+CubeMX_Config.xml
+*.html
+*.csv
+*.md
