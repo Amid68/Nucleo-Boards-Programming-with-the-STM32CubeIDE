@@ -4,6 +4,7 @@ My implementation of various Embedded projects from the Textbook [Nucleo Boards 
 ## Projects
 1. [FlashLED](./FlashLED/)
 2. [AlternateLEDs](./AlternateLEDs/)
+3. [MovingLEDs](./MovingLEDs/)
 
 ## Textbook Reference  
 📖 **Title**: Nucleo Boards Programming with the STM32CubeIDE  
