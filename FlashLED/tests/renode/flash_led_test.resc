@@ -1,0 +1,27 @@
+using sysbus
+
+# Load STM32F4 configuration
+mach create "STM32F4"
+machine LoadPlatformDescription @platforms/cpus/stm32f4xx.repl
+
+# Load firmware
+sysbus LoadELF $bin_path
+
+# Create LED monitoring
+gpio PortA.8 CreateLed "USER_LED"
+
+# Create UART test probe
+sysbus GetOrCreateUart "USART2"
+connector Connect sysbus.usart2
+
+# Add test verification
+python <<
+def test_led_blink():
+    led = GetLed("USER_LED")
+    start_state = led.IsLit
+    for _ in range(5):
+        led.WaitForStateChange(1)
+    return True
+
+test_led_blink()
+>>
